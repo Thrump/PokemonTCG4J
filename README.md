@@ -49,7 +49,7 @@ imageUrl
 ```java
 CardArray query = new cardArray();
 // or 
-CardArray query = new cardArray(types, Water);
+CardArray query = new cardArray("types", "Water");
 Card[] cardA = query.getCardArray();
 ```
 
@@ -80,7 +80,7 @@ logoUrl
 ```java
 SetArray query = new SetArray()
 // or
-SetArray query = new SetArray(standardLegal, "true");
+SetArray query = new SetArray("standardLegal", "true");
 Set[] setA = query.getSetArray();
 ```
 
