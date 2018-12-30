@@ -1,13 +1,16 @@
 # PokemonTCG4J
 A java api wrapper for [pokemontcg.io](pokemontcg.io's) Pokemon Trading Card API 
 
+
 ## Usage
+
 
 ### Card
 ```java
 Card chansey = new Card(base1-2);
 String name = chansey.getName();
 ```
+
 
 #### Card Data
 ```
@@ -41,6 +44,7 @@ evolvesFrom
 imageUrl
 ```
 
+
 ### CardArray
 ```java
 CardArray query = new cardArray();
@@ -49,11 +53,13 @@ CardArray query = new cardArray(types, Water);
 Card[] cardA = query.getCardArray();
 ```
 
+
 ### Set
 ```java
 Set doubleCrisis = new Set(dc1);
 String name = doubleCrisis.getName();
 ```
+
 
 #### Set Data
 ```
@@ -69,6 +75,7 @@ symbolUrl
 logoUrl
 ```
 
+
 ### SetArray
 ```java
 SetArray query = new SetArray()
@@ -76,6 +83,7 @@ SetArray query = new SetArray()
 SetArray query = new SetArray(standardLegal, "true");
 Set[] setA = query.getSetArray();
 ```
+
 
 ### Types
 ```java
@@ -90,12 +98,9 @@ Types subtypes = new subtypes();
 String[] subtypeList = subtypes.getSubtypes;
 ```
 
+
 ### Supertypes
 ```java
 Types supertypes = new supertypes();
 String[] supertypeList = supertypes.getSupertypes;
 ```
-
-
-
-
