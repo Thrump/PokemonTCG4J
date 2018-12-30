@@ -1,5 +1,5 @@
 # PokemonTCG4J
-A java api wrapper for [https://pokemontcg.io](pokemontcg.io's) Pokemon Trading Card API 
+A java api wrapper for [pokemontcg.io's](pokemontcg.io) Pokemon Trading Card API 
 
 
 ## Usage
