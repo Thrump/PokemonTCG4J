@@ -6,7 +6,7 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class CardId {
+public class Card {
 	
 	//private members ========================================
 	private JSONObject card;
@@ -44,7 +44,7 @@ public class CardId {
 	
 	// Constructor =========================================================
 	
-	public CardId(String id){
+	public Card(String id){
 		QueryBuilder query = new QueryBuilder("cards/" + id);
 		card = query.getSingleQuerySearch().getJSONObject("card");
 		

@@ -5,7 +5,7 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class Cards {
+public class CardArray {
 
 // private members ===============================
 	
@@ -13,7 +13,7 @@ public class Cards {
 	Map<String, String> cardPair;
 // constructors =====================================
 	
-	Cards(){
+	CardArray(){
 		QueryBuilder query = new QueryBuilder("cards/");
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("cards");
@@ -23,7 +23,7 @@ public class Cards {
 		}
 	}
 	
-	Cards(String parameter, String search){
+	CardArray(String parameter, String search){
 		QueryBuilder query = new QueryBuilder("cards?" + parameter + "=" + search);
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("cards");
