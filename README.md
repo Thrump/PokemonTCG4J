@@ -7,7 +7,7 @@ A java api wrapper for [pokemontcg.io](pokemontcg.io's) Pokemon Trading Card API
 
 ### Card
 ```java
-Card chansey = new Card(base1-2);
+Card chansey = new Card("base1-2");
 String name = chansey.getName();
 ```
 
@@ -56,7 +56,7 @@ Card[] cardA = query.getCardArray();
 
 ### Set
 ```java
-Set doubleCrisis = new Set(dc1);
+Set doubleCrisis = new Set("dc1");
 String name = doubleCrisis.getName();
 ```
 
