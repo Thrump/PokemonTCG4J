@@ -9,7 +9,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class QueryBuilder {
+class QueryBuilder {
 	
 	final private String website = "https://api.pokemontcg.io/v1/";
 	private OkHttpClient client = new OkHttpClient();

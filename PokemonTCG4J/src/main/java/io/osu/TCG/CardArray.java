@@ -1,6 +1,5 @@
 package io.osu.TCG;
 
-import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -9,17 +8,18 @@ public class CardArray {
 
 // private members ===============================
 	
-	String[] cardJSONArray;
-	Map<String, String> cardPair;
+	Card[] cardArray;
+	
 // constructors =====================================
 	
 	CardArray(){
 		QueryBuilder query = new QueryBuilder("cards/");
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("cards");
+		cardArray =  new Card[querySearch.length()];
 		for(int i = 0; i < querySearch.length(); i++) {
-			cardJSONArray[i] = querySearch.getString(i);
-			JSONObject obj = querySearch.getJSONObject(i);
+			cardArray[i] = new Card(querySearch.getJSONObject(i).getString("id"));
+			
 		}
 	}
 	
@@ -27,15 +27,17 @@ public class CardArray {
 		QueryBuilder query = new QueryBuilder("cards?" + parameter + "=" + search);
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("cards");
+		cardArray =  new Card[querySearch.length()];
 		for(int i = 0; i < querySearch.length(); i++) {
-			cardJSONArray[i] = querySearch.getString(i);
+			cardArray[i] = new Card(querySearch.getJSONObject(i).getString("id"));
+			
 		}
 	}
 	
  // public methods =========================================
 	
-	public String[] getCardArray() {
-		return cardJSONArray;
+	public Card[] getCardArray() {
+		return cardArray;
 	}
 	
 }
