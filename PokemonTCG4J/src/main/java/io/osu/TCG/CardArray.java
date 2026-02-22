@@ -12,7 +12,7 @@ public class CardArray {
 	
 // constructors =====================================
 	
-	CardArray(){
+	public CardArray(){
 		QueryBuilder query = new QueryBuilder("cards/");
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("cards");
@@ -23,7 +23,7 @@ public class CardArray {
 		}
 	}
 	
-	CardArray(String parameter, String search){
+	public CardArray(String parameter, String search){
 		QueryBuilder query = new QueryBuilder("cards?" + parameter + "=" + search);
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("cards");
