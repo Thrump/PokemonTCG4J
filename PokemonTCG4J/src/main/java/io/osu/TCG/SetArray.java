@@ -11,7 +11,7 @@ public class SetArray {
 	
 	// constructors ==========================
 	
-	SetArray(){
+	public SetArray(){
 		QueryBuilder query = new QueryBuilder("sets/");
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("sets");
@@ -23,7 +23,7 @@ public class SetArray {
 		
 	}
 	
-	SetArray(String parameter,String search){
+	public SetArray(String parameter,String search){
 		QueryBuilder query = new QueryBuilder("sets?" + parameter + "=" + search);
 		JSONObject cards = query.getSingleQuerySearch();
 		JSONArray querySearch = cards.getJSONArray("sets");
